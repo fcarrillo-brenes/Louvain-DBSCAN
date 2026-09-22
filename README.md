@@ -4,12 +4,10 @@ This repository contains the data-processing notebooks, knowledge-graph files, a
 
 The methodological framework compares four configurations:
 
-1. **Louvain only** â€” community detection over the complete knowledge graph.
-2. **DBSCAN only** â€” density-based clustering of the incident records.
-3. **Louvain â†’ DBSCAN** â€” graph communities are detected first and DBSCAN is subsequently applied within them.
-4. **DBSCAN â†’ Louvain** â€” spatial clusters are identified first and Louvain is subsequently applied to the corresponding graph substructures.
-
-The detailed cartographic analysis focuses on **Iztapalapa**, while the underlying homicide and knowledge-graph data cover Mexico City.
+1. **Louvain only** community detection over the complete knowledge graph.
+2. **DBSCAN only**  density-based clustering of the incident records.
+3. **Louvain - DBSCAN**  graph communities are detected first and DBSCAN is subsequently applied within them.
+4. **DBSCAN - Louvain** spatial clusters are identified first and Louvain is subsequently applied to the corresponding graph substructures.
 
 ## Workflow
 
@@ -75,7 +73,7 @@ Numeric incident URIs in the knowledge graph are matched to `idCarpeta` in the h
 
 Incident coordinates are overlaid on AGEB polygons and enriched with population and poverty attributes. DBSCAN and the sequential configurations are then used to evaluate the relationship between graph structure and spatial concentration.
 
-For cartographic comparisons, communities should be selected reproduciblyâ€”for example, by choosing the communities with the largest numbers of unique georeferenced incidentsâ€”rather than by their position in an unsorted list of labels.
+For cartographic comparisons, communities should be selected reproducibly, for example, by choosing the communities with the largest numbers of unique georeferenced incidents, rather than by their position in an unsorted list of labels.
 
 ## Installation
 
